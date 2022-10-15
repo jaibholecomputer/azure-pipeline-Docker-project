@@ -36,3 +36,6 @@ stages:
         Dockerfile: '**/Dockerfile'
         addPipelineData: false
         addBaseImageData: false
+        tags: |
+          $(tag)
+          latest
