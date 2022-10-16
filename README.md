@@ -1,4 +1,4 @@
-#Set up a Azurepipline and Build the Docker Image by using self-hosted pool
+#Set up a Azurepipline, Build the Docker Image and deploy Docker container by using self-hosted pool
 
 #Task 1 Pass the Agent pool name under pool section
 
