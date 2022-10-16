@@ -50,6 +50,7 @@ stages:
           docker rmi jaibholecomputer374/test:latest
           docker rmi jaibholecomputer374/test:$(Build.BuildId)
           docker rm $(REMOVE_CONTAINER)
+          mkdir /home/ec2-user/test
 
     - task: Bash@3
       displayName: Run the Docker Container
