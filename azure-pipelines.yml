@@ -26,8 +26,8 @@ stages:
          targetType: 'inline'
          script: |
           echo "Remove Docker Images"
-          docker rm $(REMOVE_CONTAINER)
-          docker rmi jaibholecomputer374/test:$(CONSTAINER_REMOVED) --force
+          docker rm $(docker stop $(docker ps | awk 'NR==2 {print $1}') | awk '{print $1}')
+          docker rmi jaibholecomputer374/test:$(sum=`expr $(Build.BuildId) - 1` &&  echo v.$sum) --force
           docker rmi jaibholecomputer374/test:latest --force
     - task: Docker@2
       displayName: Build an image
